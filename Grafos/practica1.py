@@ -18,7 +18,16 @@ def lee_grafo_stdin(grafo):
     Ejemplo retorno: 
         (['A','B','C'],[('A','B'),('B','C'),('C','B')])
     """
-    pass
+    output = ([], [])
+
+    for i in range(1, int(grafo[0]) + 1):
+        output[0].append(grafo[i])
+
+    for i in range(int(grafo[0]) + 1, len(grafo)):
+        aux = tuple(grafo[i].split())
+        output[1].append(aux)
+
+    return output
 
 def lee_grafo_archivo(file_path):
     '''
@@ -46,7 +55,7 @@ def imprime_grafo_lista(grafo):
 def lee_entrada_1():
     '''
     Lee un grafo desde entrada estandar y devuelve su representacion como lista.
-    Ejemplo Entrada: 
+    Ejemplo Entrada:
         3
         A
         B

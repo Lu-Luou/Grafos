@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-# 1ra Practica Laboratorio 
+# 1ra Practica Laboratorio
 # Teoria de Grafos
 # Consigna: Implementar los siguientes metodos
 
@@ -43,7 +43,18 @@ def lee_grafo_archivo(file_path):
     Ejemplo retorno: 
         (['A','B','C'],[('A','B'),('B','C'),('C','B')])
     '''
-    pass
+    output = ([], [])
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+        for i in range(1, int(lines[0]) + 1):
+            output[0].append(lines[i].strip())
+
+        for i in range(int(lines[0]) + 1, len(lines)):
+            aux = tuple(lines[i].strip().split()) # strip elimina espacios y split separa los chars en cadenas
+            output[1].append(aux)
+
+    return output
 
 def imprime_grafo_lista(grafo):
     '''
@@ -67,25 +78,24 @@ def lee_entrada_1():
         ['3', 'A', 'B', 'C', 'A B', 'B C', 'C B']
     '''
     data_input = []
-    
+
     for line in sys.stdin:
         if line == '\n':
             break
         else:
             # Con strip() eliminamos los '\n' del final de c/line
             data_input.append(line.strip())
-            
+
     return data_input
 
-    
 def lee_entrada_2():
     count = 0
     try:
         while True:
             line = input()
             count = count + 1
-            print ('Linea: [{0}]').format(line)
+            print('Linea: [{0}]'.format(line))
     except EOFError:
         pass
-    
-    print ('leidas {0} lineas').format(count)
+
+    print('leidas {0} lineas'.format(count))

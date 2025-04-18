@@ -8,7 +8,15 @@ def cuenta_grado(grafo_lista):
     Ejemplo retorno: 
         {'A': 1, 'B': 3, 'C': 2}
     '''
-    pass
+    vertices, aristas = grafo_lista
+    grados = {vertice: 0 for vertice in vertices}
+
+    for arista in aristas:
+        origen, destino = arista
+        grados[origen] += 1
+        grados[destino] += 1
+
+    return grados
 
 def vertice_aislado(grafo_lista):
     '''

@@ -6,6 +6,8 @@ def valida_nodo_en_grafo(grafo_lista, nodo):
 	'F'
     Ejemplo formato salida: 
         False
+    '''
+    pass
 
 def encuentra_camino(grafo_lista, nodo_ini, nodo_fin):
     '''

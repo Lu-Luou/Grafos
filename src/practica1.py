@@ -7,7 +7,7 @@
 import sys
 
 def lee_grafo_stdin(grafo):
-    """
+    """ DONE
     Recibe como argumento un grafo representado como una lista de tipo:
     Ejemplo Entrada: 
        ['3', 'A', 'B', 'C', 'A B', 'B C', 'C B']
@@ -30,7 +30,7 @@ def lee_grafo_stdin(grafo):
     return output
 
 def lee_grafo_archivo(file_path):
-    '''
+    ''' DONE
     Lee un grafo desde un archivo y devuelve su representacion como lista.
     Ejemplo Entrada: 
         3
@@ -57,10 +57,7 @@ def lee_grafo_archivo(file_path):
     return output
 
 def imprime_grafo_lista(grafo):
-    '''
-    Muestra por pantalla un grafo. El argumento esta en formato de lista.
-    '''
-    pass
+    print("Representación del grafo:", grafo)
 
 #################### FIN EJERCICIO PRACTICA ####################
 def lee_entrada_1():
